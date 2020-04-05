@@ -1,0 +1,28 @@
+<table border="1">
+    <tr>
+        <th>FirstName</th>
+        <td>{{firstName}}</td>
+
+    </tr>
+    <tr>
+        <th>LastName</th>
+        <td>{{lastName}}</td>
+
+    </tr>
+    <tr>
+        <th>Age</th>
+        <td>{{age}}</td>
+
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td>{{address}}</td>
+
+    </tr>
+
+</table>
+<button (click)="click()">Click Me!</button>
+
+<input type="text" [(ngModel)]="firstName" name="firstName">
+
+{{firstName}}

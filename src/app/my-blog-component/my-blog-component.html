@@ -1,0 +1,45 @@
+<html>
+<header>
+    <title>Java Study</title>
+
+</header>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron ">
+                    <h2 class="text-center">Java Study....</h2>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="well h4" style="background-color: lightblue;">Topics List</div>
+                <div class="btn-group-horizontal" *ngFor="let  topic of topics">
+
+                    <a href="#" class="btn-link" style="width:20px;height:90px;"><span class="glyphicon glyphicon-menu-right" style="font-size:medium;">{{topic.topic}}</span></a>
+                </div>
+
+            </div>
+
+            <div class="col-md-10" *ngIf="dataResponse!=undefined">
+                <div class="well h4" style="background-color:lightblue;">{{dataResponse.dataNode[0].header}}</div>
+                <p class="text-justify;text-center">{{dataResponse.dataNode[0].description}}</p>
+
+                <ul class="pager">
+                    <li class="previous"><a (click)="previousPage(dataResponse.previous)">Previous</a></li>
+                    <li class="next"><a (click)="nextPage(dataResponse.next)">Next</a></li>
+                </ul>
+            </div>
+            <div class="col-md-10" *ngIf="dataResponse===undefined">
+                Please wait.....
+            </div>
+        </div>
+        <div class="panel-footer text-center" style="margin-top: 120px;">Pannel Footer</div>
+    </div>
+
+</body>
+
+</html>
